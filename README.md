@@ -50,11 +50,22 @@ tModLoader
 - Worlds：世界目录，服务器创建的世界将会保存到此处
 
 如何添加模组：进入游戏后点击
+【创意工坊】->【模组整合包】->【将启用模组生成为新的整合包】->【导出完整整合包】
 
+![image](https://github.com/user-attachments/assets/fb5e56f8-c846-4ed2-bcf8-fb39a8d8ad7c)
+
+![image](https://github.com/user-attachments/assets/afa0b82b-6fd8-491a-99fd-3320748eb1fe)
+
+![image](https://github.com/user-attachments/assets/4884d81d-c511-4339-a07b-8f001d8c642a)
+
+将压缩好的Mods目录发送到运行docker的机器上：
+
+```bash
+scp .\Mods.zip pineclone@localhost:/home/pineclone/tModLoader-docker/data/
 ```
-创意工坊 -> 模组整合包 -> 将已启用的模组生成为新的整合包
--> 导出完整的整合包
+
+```bash
+cd ~/tModLoader-docker/data/
+sudo rm -r Mods  # 直接将原先的Mods目录删除
+unzip Mods.zip  # 解压压缩包
 ```
-
-将整合包目录下Mods目录内的所有文件拷贝到`./data/Mods`目录下，重载后就能看到模组列表了
-
