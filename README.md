@@ -13,7 +13,7 @@
 
 ```bash
 git clone git@github.com:eyespore/tModLoader-docker.git  # 克隆项目到本地
-cd tModLoader-docker/  # 进入项目目录
+cd ./tModLoader-docker/  # 进入项目目录
 
 docker compose up -d  # 启动服务
 docker compose exec tmodloader ./start-tModLoaderServer.sh  # 启动服务
@@ -50,6 +50,7 @@ tModLoader
 - Worlds：世界目录，服务器创建的世界将会保存到此处
 
 如何添加模组：进入游戏后点击
+
 【创意工坊】->【模组整合包】->【将启用模组生成为新的整合包】->【导出完整整合包】
 
 ![image](https://github.com/user-attachments/assets/fb5e56f8-c846-4ed2-bcf8-fb39a8d8ad7c)
@@ -61,11 +62,24 @@ tModLoader
 将压缩好的Mods目录发送到运行docker的机器上：
 
 ```bash
-scp .\Mods.zip pineclone@localhost:/home/pineclone/tModLoader-docker/data/
+scp .\Mods.zip pineclone@localhost:/home/pineclone/tModLoader-docker/
 ```
 
 ```bash
-cd ~/tModLoader-docker/data/
+sudo mv ~/tModLoader-docker/Mods.zip ~/tModLoader-docker/data/ && cd ~/tModLoader-docker/data/
 sudo rm -r Mods  # 直接将原先的Mods目录删除
-unzip Mods.zip  # 解压压缩包
+sudo unzip Mods.zip  # 解压压缩包
+sudo rm ./Mods.zip  # 删除压缩包
 ```
+
+再次启动服务，此时就可以在列表当中看到模组了
+
+```bash
+cd ~/tModLoader-docker
+docker compose up -d
+docker compose exec tmodloader ./start-tModLoaderServer.sh
+```
+
+![image](https://github.com/user-attachments/assets/646ec16e-1a05-475b-a6ee-90676b1c7389)
+
+
