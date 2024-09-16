@@ -10,3 +10,5 @@ services:
     tty: true
     stdin_open: true
     entrypoint: /bin/bash
+    volumes:
+      - ./data:/root/.local/share/Terraria/tModLoader
