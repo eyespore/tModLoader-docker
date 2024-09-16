@@ -1,0 +1,10 @@
+56a61376036a201a56aa1be3db7f7f56fc8611a3 Fix for Non-Public Mod Publishing (Tested) (#4326)
+eb67fa4c28886b38b0c350a4b008e4fd3e73b36d SocialAPI.Workshop.SupportedTags.ModTags -> SteamedWraps.ModTags (#4364)
+d6eb1c0be2c988b59fa8a4a4528e532afba0f853 Added checks, filtering, and logging for local mods with non-standard filenames. Fixes #4338 (#4342)
+8835bbc4aae19c62c82eaa0f9d27cf2f3f5e38f9 Update MonthlyMerge.yml
+8ce529367a0a7e1f75a9aba358f33101dd57d6e2 Update MonthlyMerge.yml
+91850cf8b0e9466168d8be2a88deb7b5aa7b4554 Fix #4327
+390ac73dfb8a31445d9c091c702242741ea7d1d5 [EM] Fix wrong order in ExampleChest unlock check (#4328)
+1c7754fdfce949f5e3fb3fbc00139361378a666e Add ProjectileID.Sets.FiresFewerFromDaedalusStormbow (#4249)
+40b35b201734eb8588f5be72428b8b8e4b8429ed Cleanup some code in TileIO (#4288)
+fec1777ad7fb2da4e8b7bb09f563eca151ead53d Fix serialization of arrays in TagCompound (Fixes #4316)
